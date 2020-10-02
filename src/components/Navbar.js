@@ -21,7 +21,7 @@ export default class Navbar extends Component {
                 src={logo}
                 alt="Como home logo"
                 title={"Como home logo"}
-              ></img>
+              />
             </Link>
             <botton
               type="button"
