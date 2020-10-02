@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import { RoomProvider } from "./context";
 ReactDOM.render(
   <RoomProvider>
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <App />
     </Router>
   </RoomProvider>,
