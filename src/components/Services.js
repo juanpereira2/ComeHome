@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Title from "./Title";
 import { FaCocktail, FaHiking, FaShuttleVan, FaBeer } from "react-icons/fa";
-export default class Services extends Component {
-  state = {
-    services: [
+
+const Services = () =>{
+
+  const [services] = useState([
       {
         icon: <FaCocktail />,
         title: "Coquiteis de Graça",
@@ -28,14 +29,13 @@ export default class Services extends Component {
         info:
           "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora eius eum sit odit voluptate rem esse quidem omnis iste, officia rerum consectetur provident adipisci nihil perferendis numquam nemo possimus laborum.",
       },
-    ],
-  };
-  render() {
+  ]);
+
     return (
       <section className="services">
-        <Title title="services"></Title>
+        <Title title="services" />
         <div className="services-center">
-          {this.state.services.map((item, index) => {
+          {services.map((item, index) => {
             return (
               <article key={index} className="service">
                 <span>{item.icon}</span>
@@ -47,5 +47,6 @@ export default class Services extends Component {
         </div>
       </section>
     );
-  }
 }
+
+export default Services;

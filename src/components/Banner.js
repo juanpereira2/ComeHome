@@ -1,7 +1,8 @@
 import React from "react";
-//import Hero from "./Hero";
+import PropTypes from 'prop-types';
 
-export default function Banner({ children, title, subtitle }) {
+const Banner = ({ children, title, subtitle }) => {
+
   return (
     <div className="banner">
       <h1>{title}</h1>
@@ -9,4 +10,13 @@ export default function Banner({ children, title, subtitle }) {
       {children}
     </div>
   );
+
 }
+
+Banner.propTypes = {
+  children: PropTypes.element,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired
+};
+
+export default Banner;

@@ -1,8 +1,19 @@
 import React from "react";
+import PropTypes from 'prop-types'
 
-export default function Hero({ children, hero }) {
+const Hero = ({children, hero}) => {
+
   return <header className={hero}>{children}</header>;
+
 }
+
 Hero.defaultProps = {
   hero: "defaultHero",
 };
+
+Hero.propTypes = {
+  hero: PropTypes.string,
+  children: PropTypes.element
+};
+
+export default Hero;
